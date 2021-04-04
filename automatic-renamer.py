@@ -66,7 +66,7 @@ def main():
     sg.theme('Black')
     filename = sys.argv[1].split('\\')[-1][:-1]
     extension = str('.') + filename.split('.')[-1]
-    extensions = ['srt','mp4','mkv','avi']
+    extensions = ['.srt','.mp4','.mkv','.avi']
     if extension not in extensions:
         extension = ''
     

@@ -20,7 +20,7 @@ A step by step series of examples that tell you how to get a development env run
 
 Install Python 3.x with pip
 
-PySimpleGUI
+Install PySimpleGUI
 
 ```
 pip install PySimpleGUI
