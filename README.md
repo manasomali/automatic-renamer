@@ -2,6 +2,8 @@
 
 Program to rename files or folder. Can be used to rename series, movies or anime. It performs an automatic processing of the name file and follow some rules create a new personalized name for the file. It shows the new name for the user so it can be edited before the execution of rename.
 
+![Python Automatic Renamer](sample.gif)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
