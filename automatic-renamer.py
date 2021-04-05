@@ -9,8 +9,8 @@ def renameTvShow(textShow):
     vecTextShow = textShow.replace(' ', '.').replace('-', '.').split('.')[:-1]
     vecNewName = []
     for text in vecTextShow:
-        if re.match('([S])\d\d+(E)\d\d', text):
-            vecNewName.append(text.replace('S', 'Tem_').replace('E', ' Epi_'))
+        if re.match('([s])\d\d+(e)\d\d', text.lower()):
+            vecNewName.append(text.replace('S', 'Tem_').replace('E', ' Epi_').capitalize())
             break
         vecNewName.append(text)
         
@@ -23,7 +23,7 @@ def renameMovie(textMovie):
     vecNewName = []
     for text in vecTextMovie:
         if re.match('(20)\d\d', text):
-            vecNewName.append(text.replace('S', 'Tem_').replace('E', ' Epi_'))
+            vecNewName.append(text.capitalize())
             break
         vecNewName.append(text)
         
@@ -37,7 +37,7 @@ def renameAnime(textAnime):
     teste = False
     for text in vecTextAnime:
         if re.match('\d\d', text) or re.match('\d', text) and teste:
-            vecNewName.append(text)
+            vecNewName.append(text.capitalize())
             break
         if re.match('(episodio)', text):
             teste = True
@@ -72,7 +72,7 @@ def main():
     
     layout = [
         [sg.Text('Automatic Rename', size=(50, 1), justification='center')],
-        [sg.Button('Tv Show'), sg.Button('Movie'), sg.Button('Anime')],
+        [sg.Button('Series'), sg.Button('Movie'), sg.Button('Anime')],
         [sg.Text('From: '+str(filename), size=(50, 1), justification='center')],
         [sg.Text('To: '), sg.Input(key='-INPUT-')],
         [sg.Button('Rename'),sg.Button('Cancel')]    ]
