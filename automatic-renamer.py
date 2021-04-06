@@ -12,7 +12,7 @@ def renameTvShow(textShow):
         if re.match('([s])\d\d+(e)\d\d', text.lower()):
             vecNewName.append(text.replace('S', 'Tem_').replace('E', ' Epi_').capitalize())
             break
-        vecNewName.append(text)
+        vecNewName.append(text.capitalize())
         
     newName = ' '.join(vecNewName)
     return newName
@@ -25,7 +25,7 @@ def renameMovie(textMovie):
         if re.match('(20)\d\d', text):
             vecNewName.append(text.capitalize())
             break
-        vecNewName.append(text)
+        vecNewName.append(text.capitalize())
         
     newName = ' '.join(vecNewName)
     return newName
@@ -45,7 +45,7 @@ def renameAnime(textAnime):
     if len(vecNewName) == 0:
         for text in vecTextAnime:
             if re.match('\d\d', text) or re.match('\d', text):
-                vecNewName.append(text)
+                vecNewName.append(text.capitalize())
                 break
             
     newName = ' '.join(vecNewName)
@@ -85,7 +85,7 @@ def main():
         event, values = window.read()
         newName=''
             
-        if event  == 'Tv Show':
+        if event  == 'Series':
             newName = renameTvShow(filename)
             
         if event  == 'Movie':
