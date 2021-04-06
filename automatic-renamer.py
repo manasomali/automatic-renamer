@@ -9,8 +9,8 @@ def renameTvShow(textShow):
     vecTextShow = textShow.replace(' ', '.').replace('-', '.').split('.')[:-1]
     vecNewName = []
     for text in vecTextShow:
-        if re.match('([s])\d\d+(e)\d\d', text.lower()):
-            vecNewName.append(text.replace('S', 'Tem_').replace('E', ' Epi_').capitalize())
+        if re.match('([s])\d\d+([e])\d\d', text.lower()):
+            vecNewName.append(text.lower().replace('e', ' Epi_').replace('s', 'Tem_'))
             break
         vecNewName.append(text.capitalize())
         

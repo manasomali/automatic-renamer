@@ -51,7 +51,7 @@ def renameAnime(textAnime):
 textShow = 'Young.Sheldon.S04E10.WEBRip.x264-ION10'
 textMovie = 'Burrow.1978.vez.2.2020.1080p.WEB-DL.x264.AC3.HORiZON-ArtSubs.mp4'
 textAnime = 'boku-no-hero-academia-51'
-
+print(textShow.lower())
 extension = textAnime.split('.')[-1]
 
 extensions = ['srt','mp4','mkv','avi']
