@@ -50,7 +50,7 @@ $ pip install -r requirements.txt
 
 ## Testing
 
-For testing, use the sample video e subtitle in the forlder "test" and call the main script:
+For testing, use the sample video in the forlder "test" and call the main script:
 ```
 cd test/
 python ../automatic-renamer/automatic-renamer.py
