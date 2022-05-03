@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\automatic-renamer]
+@="Automatic Rename This"
+"Icon"="C:\\Program Files\\Automatic Renamer\\automatic-renamer.ico"
+
+[HKEY_CLASSES_ROOT\*\shell\automatic-renamer\command]
+@="\"C:\\Program Files\\Automatic Renamer\\automatic-renamer.exe\" \"%v.\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\automatic-renamer]
+@="Automatic Rename This"
+"Icon"="C:\\Program Files\\Automatic Renamer\\automatic-renamer.ico"
+
+[HKEY_CLASSES_ROOT\Directory\shell\automatic-renamer\command]
+@="\"C:\\Program Files\\Automatic Renamer\\automatic-renamer.exe\" \"%v.\""
+

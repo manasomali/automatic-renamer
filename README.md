@@ -2,13 +2,9 @@
 
 Program to rename files or folder. Can be used to rename series, movies or anime. It performs an automatic processing of the name file and follow some rules create a new personalized name for the file. It shows the new name for the user so it can be edited before the execution of rename.
 
-![Python Automatic Renamer](sample.gif)
+![Python Automatic Renamer](static/sample.gif)
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Prerequisites
+## Prerequisites
 
 What things you need to install the software and how to install them
 
@@ -16,41 +12,60 @@ What things you need to install the software and how to install them
 Python 3.x
 ```
 
-### Installing
+## Getting Started
 
-A step by step series of examples that tell you how to get a development env running
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Install Python 3.x with pip
-
-Install PySimpleGUI
+Start creating a virtual environment called "venv":
 
 ```
-pip install PySimpleGUI
+$ python -m venv venv
 ```
 
-Install send2trash
+Then, activate with:
+
+Windows:
 
 ```
-pip install Send2Trash
+$ venv\Scripts\activate
 ```
 
-Install PyInstaller, to generate .exe file (for Windows)
+MacOs:
 
 ```
-pip install pyinstaller
+$ source venv/bin/activate
 ```
 
+When finised, deactivate with:
 
-## Running the tests
+```
+$ deactivate
+```
+
+After activate "env" it is necessary install the requirements:
+
+```
+$ pip install -r requirements.txt
+```
+
+## Testing
+
+For testing, use the sample video e subtitle in the forlder "test" and call the main script:
+```
+cd test/
+python ../automatic-renamer/automatic-renamer.py
+```
+
+## Running
 
 ### Linux, Mac OS X, BSD and most OSes except Windows
 Turn script executable:
 
 ```
-chmod +x automatic-renamer.py
+chmod +x automatic-renamer/automatic-renamer.py
 ```
 
-Call script selected file:
+Call script inside a folder:
 
 ```
 ./automatic-renamer.py .
@@ -58,7 +73,7 @@ Call script selected file:
 
 ### Windows
 
-To run a test, call the script inside a folder with photos.
+1. To run a test, call the script inside the folder.
 
 ```
 python automatic-renamer.py .
@@ -66,15 +81,15 @@ python automatic-renamer.py .
 
 **For Windows in Context Menu:**
 
-1. To generate *automatic-renamer.exe* file to run on Windows.
+To generate *automatic-renamer.exe* file to run on Windows.
 
 ```
-pyinstaller -w -F automatic-renamer.py
+pyinstaller -w -F automatic-renamer/automatic-renamer.py
 ```
 
-2. Add the keys on Registry or run *automatic-renamer.reg*.
-3. Copy .exe file on *C:\Program Files\Automatic Renamer*
-4. Add *C:\Program Files\Automatic Renamer* in the *Path* on Windows Environment Variable.
+2. Add the keys on Registry or run *static/automatic-renamer.reg*.
+3. Copy .exe file on *C:\Program Files\Legendas TV Organizer*
+4. Add *C:\Program Files\Legendas TV Organizer* in the *Path* on Windows Environment Variable.
 
 ## Contributing
 
@@ -91,6 +106,7 @@ This project is licensed under the [GNU General Public License](https://opensour
 
 ## Acknowledgments
 
-Codigo inspirado em:
+Inspired by:
+
 * [photo-organizer](https://github.com/gabrielfroes/photo-organizer)
 * [Código Fonte TV](https://www.youtube.com/codigofontetv), Youtube Channel.
